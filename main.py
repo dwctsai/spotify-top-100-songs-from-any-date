@@ -6,13 +6,23 @@ import os
 import pprint
 from dotenv import load_dotenv
 
+"""
+This program will look up Billboard's Top 100 songs from any date and create a 
+private Spotify playlist of those songs.
+
+The Billboard top songs list is at:
+https://www.billboard.com/charts/hot-100/
+"""
+
 # -------------------- SCRAPE THE BILLBOARD 100 --------------------
 
 BILLBOARD_100_URL = "https://www.billboard.com/charts/hot-100/"
 
 # Scrape the Billboard 100
-date = input("Which year do you want to travel to? Type the date in this format YYYY-MM-DD: ")
+print("This program will create a private Spotify playlist of the Billboard Top 100 songs from any date.")
+date = input("Type the date you want to look up in this format YYYY-MM-DD: ")
 # date = "2001-06-01"
+print("")
 
 response = requests.get(BILLBOARD_100_URL + date)
 billboard_html = response.text
@@ -23,7 +33,9 @@ soup = BeautifulSoup(billboard_html, "html.parser")
 song_names_spans = soup.find_all("span", class_="chart-element__information__song text--truncate color--primary")
 # print(song_names_spans)
 song_names = [song.getText() for song in song_names_spans]
+print("Songs: ")
 print(song_names)
+print("")
 
 
 # -------------------- SPOTIFY AUTHENTICATION  --------------------
@@ -36,7 +48,7 @@ load_dotenv(".env")
 SPOTIFY_CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
 
-
+# Successfully authenticating with Spotify will generate a file "token.txt".
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         scope="playlist-modify-private",
@@ -70,13 +82,19 @@ for song in song_names:
         song_uris.append(uri)
     except IndexError:
         print(f"{song} doesn't exist in Spotify.  Skipped.")
+print("")
 print(song_uris)
 
 
-# -------------------- CREATE SPOTIFY PLAYLIST --------------------
+# -------------------- CREATE PRIVATE SPOTIFY PLAYLIST --------------------
 
-playlist = sp.user_playlist_create(user=user_id, name=f"{date} Billboard Top 100", public=False)
+playlist = sp.user_playlist_create(user=user_id, name=f"{date} - Billboard Top 100", public=False)
 print(playlist)
 
 # Add songs found into the new playlist
 sp.playlist_add_items(playlist_id=playlist["id"], items=song_uris)
+
+print("")
+print("Your Spotify playlist has been created at URL:")
+print(playlist["external_urls"]["spotify"])
+
