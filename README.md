@@ -27,12 +27,20 @@ Once you've signed up and signed in to Spotify, go to the developer dashboard at
 
 https://developer.spotify.com/dashboard/
 
+<p align="center">
+    <img src="media/dashboard_01.jpg" width="500">
+</p>
+
 On the Dashboard page, click the "Create An App" button.\
 For "App Name", enter any name (e.g. "Billboard to Spotify").\
 For "App Description", enter any description (e.g. "Take Billboard's Top 100 songs list from a date in the past to create a Spotify playlist.")\
 Click "Create".
 
 ### 3. Copy the Spotify App's "Client ID" and "Client Secret"
+<p align="center">
+    <img src="media/dashboard_02.jpg" width="500">
+</p>
+
 After creating the new Spotify app, it will appear on your Dashboard.\
 From the Dashboard, click the app to enter its detail page.\
 The next screen's top-left corner will show the app's "Client ID" and "Client Secret" (click "Show Client Secret" to reveal it).\
@@ -53,6 +61,10 @@ SPOTIFY_CLIENT_SECRET=3d61a121cb0b4b8f9c19a61013847463
 ```
 
 ### 5. Set the Spotify App's "Redirect URI"
+<p align="center">
+    <img src="media/dashboard_03.jpg" width="500">
+</p>
+
 In the Spotify Developer Dashboard, click your app to go to its detail page.\
 Then click the green "Edit Settings" button at the top-right.
 
@@ -65,6 +77,10 @@ and click "Add".  Then at the bottom, click "Save".
 ### 6. Authenticate with Spotify for the first time
 Run "main.py".  
 If Spotify authentication is successful, you should see a Spotify webpage appear asking you to agree.
+
+<p align="center">
+    <img src="media/dashboard_04.jpg" width="500">
+</p>
 
 Then it will take you to a page with a URL starting with "example.com/..."
 
