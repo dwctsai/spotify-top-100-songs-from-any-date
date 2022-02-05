@@ -22,7 +22,7 @@ In order to create a playlist in Spotify, you must have an account with Spotify.
 
 http://spotify.com/signup/
 
-### 2. Create a new Spotify App in the Spotify Dashboard
+### 2. Create a new Spotify App in the Spotify Developer Dashboard
 Once you've signed up and signed in to Spotify, go to the developer dashboard at: 
 
 https://developer.spotify.com/dashboard/
@@ -33,7 +33,8 @@ For "App Description", enter any description (e.g. "Take Billboard's Top 100 son
 Click "Create".
 
 ### 3. Copy the Spotify App's "Client ID" and "Client Secret"
-After creating the new Spotify app, it will appear on your dashboard.  Click it.\
+After creating the new Spotify app, it will appear on your Dashboard.\
+From the Dashboard, click the app to enter its detail page.\
 The next screen's top-left corner will show the app's "Client ID" and "Client Secret" (click "Show Client Secret" to reveal it).\
 Copy these two strings for the next step.
 
@@ -52,7 +53,8 @@ SPOTIFY_CLIENT_SECRET=3d61a121cb0b4b8f9c19a61013847463
 ```
 
 ### 5. Set the Spotify App's "Redirect URI"
-In the Spotify developer dashboard, on your app's page click the green "Edit Settings" button at the top-right.
+In the Spotify Developer Dashboard, click your app to go to its detail page.\
+Then click the green "Edit Settings" button at the top-right.
 
 In the "Redirect URIs" section, type in 
 ```
