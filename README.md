@@ -37,13 +37,14 @@ For "App Description", enter any description (e.g. "Take Billboard's Top 100 son
 Click "Create".
 
 ### 3. Copy the Spotify App's "Client ID" and "Client Secret"
+After creating the new Spotify app, it will appear on your Dashboard.\
+From the Dashboard, click the app to enter its detail page.\
+The next screen's top-left corner will show the app's "Client ID" and "Client Secret" (click "Show Client Secret" to reveal it).\
+
 <p align="center">
     <img src="media/dashboard_02.jpg" width="500">
 </p>
 
-After creating the new Spotify app, it will appear on your Dashboard.\
-From the Dashboard, click the app to enter its detail page.\
-The next screen's top-left corner will show the app's "Client ID" and "Client Secret" (click "Show Client Secret" to reveal it).\
 Copy these two strings for the next step.
 
 ### 4. Create a ".env" file.
@@ -61,12 +62,12 @@ SPOTIFY_CLIENT_SECRET=3d61a121cb0b4b8f9c19a61013847463
 ```
 
 ### 5. Set the Spotify App's "Redirect URI"
+In the Spotify Developer Dashboard, click your app to go to its detail page.\
+Then click the green "Edit Settings" button at the top-right.
+
 <p align="center">
     <img src="media/dashboard_03.jpg" width="500">
 </p>
-
-In the Spotify Developer Dashboard, click your app to go to its detail page.\
-Then click the green "Edit Settings" button at the top-right.
 
 In the "Redirect URIs" section, type in 
 ```
@@ -76,13 +77,14 @@ and click "Add".  Then at the bottom, click "Save".
 
 ### 6. Authenticate with Spotify for the first time
 Run "main.py".  
-If Spotify authentication is successful, you should see a Spotify webpage appear asking you to agree.
+If Spotify authentication is successful, you should see a Spotify webpage appear asking you for access permissions.
 
 <p align="center">
     <img src="media/dashboard_04.jpg" width="500">
 </p>
 
-Then it will take you to a page with a URL starting with "example.com/..."
+Click "Agree".\
+It will then take you to a page with a URL starting with "example.com/..."
 
 Copy the entire URL.  In the Python console where you're running "main.py", you'll see a console prompt "Enter the URL you were redirected to."  Paste in the entire URL and hit Enter.
 
