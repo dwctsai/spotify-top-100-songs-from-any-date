@@ -23,7 +23,7 @@ In order to create a playlist in Spotify, you must have an account with Spotify.
 http://spotify.com/signup/
 
 ### 2. Create a new Spotify App in the Spotify Developer Dashboard
-Once you've signed up and signed in to Spotify, go to the developer dashboard at: 
+Once you've signed up and signed in to Spotify, go to the Developer Dashboard at: 
 
 https://developer.spotify.com/dashboard/
 
@@ -39,7 +39,7 @@ Click "Create".
 ### 3. Copy the Spotify App's "Client ID" and "Client Secret"
 After creating the new Spotify app, it will appear on your Dashboard.\
 From the Dashboard, click the app to enter its detail page.\
-The next screen's top-left corner will show the app's "Client ID" and "Client Secret" (click "Show Client Secret" to reveal it).\
+The next screen's top-left corner will show the app's "Client ID" and "Client Secret" (click "Show Client Secret" to reveal it).
 
 <p align="center">
     <img src="media/dashboard_02.jpg" width="500">
@@ -73,7 +73,8 @@ In the "Redirect URIs" section, type in
 ```
 http://example.com
 ```
-and click "Add".  Then at the bottom, click "Save".
+and click "Add".\
+Then at the bottom, click "Save".
 
 ### 6. Authenticate with Spotify for the first time
 Run "main.py".  
@@ -86,7 +87,9 @@ If Spotify authentication is successful, you should see a Spotify webpage appear
 Click "Agree".\
 It will then take you to a page with a URL starting with "example.com/..."
 
-Copy the entire URL.  In the Python console where you're running "main.py", you'll see a console prompt "Enter the URL you were redirected to."  Paste in the entire URL and hit Enter.
+Copy the entire URL from your web browser's address bar.\
+In the Python console where you're running "main.py", you'll see a console prompt "Enter the URL you were redirected to."\
+Paste in the entire URL and hit Enter.
 
 If successful, a file called "token.txt" will be generated in the same folder as "main.py".
 
