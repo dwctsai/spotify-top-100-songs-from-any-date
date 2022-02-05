@@ -22,13 +22,20 @@ In order to create a playlist in Spotify, you must have an account with Spotify.
 
 http://spotify.com/signup/
 
-### 2. Create a new Spotify App
-Once you've signed up and signed in to Spotify, go to the developer dashboard and create a new Spotify App: 
+### 2. Create a new Spotify App in the Spotify Dashboard
+Once you've signed up and signed in to Spotify, go to the developer dashboard at: 
 
 https://developer.spotify.com/dashboard/
 
+On the Dashboard page, click the "Create An App" button.\
+For "App Name", enter any name (e.g. "Billboard to Spotify").\
+For "App Description", enter any description (e.g. "Take Billboard's Top 100 songs list from a date in the past to create a Spotify playlist.")\
+Click "Create".
+
 ### 3. Copy the Spotify App's "Client ID" and "Client Secret"
-Once you've created a Spotify app, copy the Client ID and Client Secret.
+After creating the new Spotify app, it will appear on your dashboard.  Click it.\
+The next screen's top-left corner will show the app's "Client ID" and "Client Secret" (click "Show Client Secret" to reveal it).\
+Copy these two strings for the next step.
 
 ### 4. Create a ".env" file.
 In the same folder as "main.py", create a new file called ".env".
