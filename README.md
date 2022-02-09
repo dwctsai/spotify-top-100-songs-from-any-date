@@ -12,8 +12,9 @@ https://www.billboard.com/charts/hot-100/
 
 The Billboard site allows you to look up the songs from any date.
 You can do so by using the date selector menu at the top of the site, or by typing in a URL with the format:
-
+```
 https://www.billboard.com/charts/hot-100/YYYY-MM-DD
+```
 
 ## Setup
 
