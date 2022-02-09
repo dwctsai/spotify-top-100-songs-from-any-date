@@ -30,9 +30,14 @@ billboard_html = response.text
 soup = BeautifulSoup(billboard_html, "html.parser")
 # print(soup.prettify())
 
-song_names_spans = soup.find_all("span", class_="chart-element__information__song text--truncate color--primary")
+# Old implementation prior to Billboard changing its website layout in November 2021:
+# song_names_spans = soup.find_all("span", class_="chart-element__information__song text--truncate color--primary")
+# song_names = [song.getText() for song in song_names_spans]
+
+song_names_spans = soup.find_all("h3", id="title-of-a-story", class_="a-font-primary-bold-s")
 # print(song_names_spans)
-song_names = [song.getText() for song in song_names_spans]
+
+song_names = [song.getText().strip() for song in song_names_spans]
 print("Songs: ")
 print(song_names)
 print("")
