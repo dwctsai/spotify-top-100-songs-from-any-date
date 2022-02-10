@@ -1,10 +1,11 @@
-from bs4 import BeautifulSoup
+import os
+
 import requests
 import spotipy
-from spotipy.oauth2 import SpotifyOAuth
-import os
 import pprint
+from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+from spotipy.oauth2 import SpotifyOAuth
 
 """
 This program will look up Billboard's Top 100 songs from any date and create a 
@@ -102,4 +103,3 @@ sp.playlist_add_items(playlist_id=playlist["id"], items=song_uris)
 print("")
 print("Your Spotify playlist has been created at URL:")
 print(playlist["external_urls"]["spotify"])
-
