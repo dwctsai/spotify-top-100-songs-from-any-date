@@ -1,10 +1,10 @@
 ## Introduction
 
-This program will look up Billboard's Top 100 songs from any date and create a 
+This program will look up Billboard's Hot 100 songs from any date and create a 
 private Spotify playlist of those songs.
 
 
-## Manually Accessing the Billboard Top 100 Songs
+## Manually Accessing the Billboard Hot 100 Songs
 
 The Billboard top songs list is at:
 
